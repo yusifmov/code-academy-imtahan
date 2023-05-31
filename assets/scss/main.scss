@@ -29,11 +29,107 @@
 
 .has-line{
     display: flex;
+    align-items: center;
+    gap: 20px;
+    color: #ff2143;
     &::before{
         content: " ";
         display: block;
         border: 1px solid #ff2143;
-        width: 40px;
+        width: 50px;
         height: 0;
     }
+}
+
+.section-our-services{
+    background-color: rgb(247, 247, 247);
+    .custom-card{
+        i{
+            font-size: 80px !important;
+            color: #ff2143;
+        }
+        h2{
+            font-size: 20px;
+            color: #1c165c;
+            margin:0;
+        }
+        p{
+            font-size:16px;
+            color:#57667e;
+            margin:0;
+        }
+        &:hover{
+            background-color: #ff2143!important;
+            i, h2, p{
+                color: white!important;
+            }
+        }
+    }
+}
+
+.section-about{
+    background-image: url("../images/about-bg.webp");
+    background-size: contain;
+
+    p, h1{
+        color:white;
+    }
+
+    p.has-line::before{
+        border-color: white;
+    }
+
+    .text-small-1{
+        font-size: 20px;
+    }
+    .text-small-2{
+        font-size: 14px;
+    }
+}
+
+.section-team-and-partners{
+    .partners-container{
+        .partners{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: center;
+            align-content: center;
+            gap: 40px;
+            img{
+                max-width: 200px;
+            }
+            .partner{
+                position: relative;
+                .actions{
+                    position: absolute;
+                    top: -45px;
+                    right: -30px;
+                }
+            }
+        }
+    }
+}
+
+footer{
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        li{
+            margin: 0;
+            color: white;
+        }
+    }
+}
+
+button.action{
+    background-color: transparent;
+    border: 1px solid cyan;
+    border-radius: 50%;
+    padding: 5px;
+    width: 40px;
+    box-sizing: border-box;
+    aspect-ratio: 1;
 }

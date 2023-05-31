@@ -1,0 +1,19 @@
+{
+  "messages": [
+    {
+      "email": "yusif@gmail.com",
+      "message": "Salam",
+      "id": 1
+    }
+  ],
+  "partners": [
+    {
+      "src": "assets/images/brand3.webp",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "src": "assets/images/brand2.webp"
+    }
+  ]
+}
