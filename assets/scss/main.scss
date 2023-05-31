@@ -1,0 +1,39 @@
+.top-nav{
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 15px;
+        margin: 0;
+        li{
+            margin: 0;
+        }
+    }
+}
+
+.carousel{
+    height: 100vh;
+    background-image: url("../images/carousel.jpg");
+    background-size: cover;
+
+    .carousel-item{
+        p{
+            font-size: 20px;
+        }
+    }
+}
+
+.custom-button{
+    background-color: #ff2143;
+    width: 200px;
+}
+
+.has-line{
+    display: flex;
+    &::before{
+        content: " ";
+        display: block;
+        border: 1px solid #ff2143;
+        width: 40px;
+        height: 0;
+    }
+}
