@@ -3,8 +3,8 @@ const message = document.getElementById('message');
 const contact = document.getElementById('contact');
 
 const partners = document.querySelector('.partners');
-const sortASC = document.getElementById('sortASC');
-const sortDESC = document.getElementById('sortDESC');
+const sortDESC = document.getElementById('sort');
+const add = document.getElementById('add');
 
 let partnersArr = [];
 
@@ -99,12 +99,22 @@ function populatePartners(data){
     });
 }
 
-sortASC.onclick = () => {
-    populatePartners(partnersArr.sort());
-}
-
 sortDESC.onclick = () => {
     populatePartners(partnersArr.sort().reverse());
+}
+
+add.onclick = () => {
+    const url = prompt("url-i daxil et (ex: assets/images/brand2.webp): ");
+
+    fetch('http://localhost:3000/partners/', {
+        method: 'post',
+        body: JSON.stringify({
+            src: url
+        }),
+        headers: {'Content-Type': 'application/json'}
+    }).then(e => {
+        getPartners();
+    });
 }
 
 getPartners();
